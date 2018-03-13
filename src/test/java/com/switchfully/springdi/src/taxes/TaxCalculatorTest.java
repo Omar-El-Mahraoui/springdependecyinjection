@@ -22,7 +22,7 @@ public class TaxCalculatorTest {
 
     @Test
     public void calculateTaxes_givenABelgianTaxCalculation_thenReturnTheCorrectTaxAmount() {
-        when(taxCalculator.calculateTaxes(new BigDecimal("23000").setScale(2)))
+        when(americanTaxCalculation.calculateTaxes(new BigDecimal("23000").setScale(2)))
                 .thenReturn(new BigDecimal("10350").setScale(2));
         assertThat(taxCalculator.calculateTaxes(new BigDecimal("23000").setScale(2)))
                 .isEqualTo(new BigDecimal("10350").setScale(2));
